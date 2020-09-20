@@ -27,11 +27,11 @@ key.
 At first, Alice and Bob agree on a mapping from every digit from 0 to 9 to a frequency with
 a binary representation that differs from 0. Each digit must map uniquely to a frequency. When
 Alice wants to encrypt a message, she calls the Cryptographer. A pair of keys is generated:
-   A relatively large number (that will not lead to an overflow) q is chosen.
-   From a cyclic group F(q), an element g is selected
-   From the same acyclic group, an element a is selected, such that gcd(a, q) = 1
-   The value h = g^a
-   A random value y from F(q), such that gcd(y, q) = 1. A new y is usually generated for each
+  * A relatively large number (that will not lead to an overflow) q is chosen.
+  * From a cyclic group F(q), an element g is selected
+  * From the same acyclic group, an element a is selected, such that gcd(a, q) = 1
+  * The value h = g^a
+  * A random value y from F(q), such that gcd(y, q) = 1. A new y is usually generated for each
     encryption in order to improve security. Thus, y is called an ephemeral key.
 
 F, h, q and g represent the public key, while a is kept safely as it represents the private key. y
