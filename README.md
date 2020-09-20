@@ -27,7 +27,7 @@ key.
 At first, Alice and Bob agree on a mapping from every digit from 0 to 9 to a frequency with
 a binary representation that differs from 0. Each digit must map uniquely to a frequency. When
 Alice wants to encrypt a message, she calls the Cryptographer. A pair of keys is generated:
-   A relatively large number (that will nod lead to an overflow) q is chosen.
+   A relatively large number (that will not lead to an overflow) q is chosen.
    From a cyclic group F(q), an element g is selected
    From the same acyclic group, an element a is selected, such that gcd(a, q) = 1
    The value h = g^a
