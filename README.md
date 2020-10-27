@@ -52,7 +52,7 @@ and there are just too few frequencies that actually hide something to be notice
 
 Now, Bob has the agreed mapping, the private key and the audio file, and he wants to knows
 what Alice has to say to him. He will also call the Cryptographer, but in decryption mode.
-Our program will read the ’wav’ file in binary mode, skip the header, and start processing the
+The program will read the ’wav’ file in binary mode, skip the header, and start processing the
 frequencies, two bytes at a time. Each value will be mapped to its original digit and an integer will
 be created. When a value of 0 is encountered, we save the current integer in an array and start to
 generate a new integer. When two consecutive frequencies of 0 are encountered in the binary file,
@@ -65,7 +65,7 @@ character in the intial text. Finally, these characters are printed and Bob has 
 decrypted Alice’s message.
 
 ### **3. User Interaction**
-When implementing the extension, we tried to design a program with perfect user interaction as we
+When implementing the extension, I tried to design a program with perfect user interaction as I
 wanted everyone to be able to use it, not just people who understand programming or cryptography.
 Such, the Cryptographer works in two modes: encryption and decryption.
 If the ”enc” argument is given, the name of the output file and the one that stores the digits to
@@ -79,14 +79,14 @@ If the number of provided arguments is not the one we expect, or an unexpected a
 given, instructions are provided in order to help the user.
 
 ### **4. Testing**
-The program ”testCryptographer.py” was created for testing. We chose Python as it provided
+The program ”testCryptographer.py” was created for testing. I chose Python as it provided
 functions that could easily interact with C programs and the standard input and output. Although
 Python is generally slower than other programming languages, speed was not of interest here, as
-we only cared about the correctness of our algorithm.
+I only cared about the correctness of our algorithm.
 Finally, our testing process relied on the fact that the initial message and the string that results
-after encryption and decryption must be the same. Thus, we generated a file with random strings of
-various lengths and we loaded each string in our Python script. Then we called the Cryptographer
-to encode it and to do the decoding, acting as both Alice and Bob. In the end we compared the
+after encryption and decryption must be the same. Thus, I generated a file with random strings of
+various lengths and I loaded each string in our Python script. Then I called the Cryptographer
+to encode it and to do the decoding, acting as both Alice and Bob. In the end I compared the
 initial string and the resulting one. If there were no differences, the Cryptographer behaved as
-expected. In the end, we tested our extension on more than 1000 tests. They all passed, indicating
+expected. In the end, I tested the extension on more than 1000 tests. They all passed, indicating
 that the Cryptographer was implemented correctly
