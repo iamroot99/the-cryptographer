@@ -2,14 +2,17 @@
 
 ### Usage:
   Encryption:
-    ```./cryptographer enc output_file.wav encodings.txt
+    ``` bash
+      ./cryptographer enc output_file.wav encodings.txt
     ```
   
   Decryption:
-    ```./cryptographer dec  input_file.wav decodings.txt
+    ``` bash
+      ./cryptographer dec  input_file.wav decodings.txt
     ```
  ### Testing:
    From the **cryptographer_src** folder:
-     ```python3 testCryptographer.py
+     ``` python3
+        python3 testCryptographer.py
      ```
     
